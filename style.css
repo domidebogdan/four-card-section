@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-red: hsl(0, 78%, 62%);
+  --color-primary-cyan: hsl(180, 62%, 55%);
+  --color-primary-orange: hsl(34, 97%, 64%);
+  --color-primary-blue: hsl(212, 86%, 64%);
+
+  --color-neutral-very-dark-blue: hsl(234, 12%, 34%);
+  --color-neutral-grayish-blue: hsl(229, 6%, 66%);
+  --color-neutral-very-light-gray: hsl(0, 0%, 98%);
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  background-color: var(--color-primary-pale-blue);
+  min-height: 100vh;
+  display: grid;
+}
+
+main {
+  display: inline-grid;
+  justify-content: center;
+  gap: 4rem;
+  padding: 5rem 10rem 5rem 10rem;
+}
+.text {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+h1.title {
+  color: var(--color-neutral-very-dark-blue);
+  font-size: 2.25rem;
+  font-weight: 200;
+}
+
+h2.tagline {
+  color: var(--color-neutral-very-dark-blue);
+  font-size: 2.25rem;
+  font-weight: 600;
+}
+
+.description {
+  color: var(--color-neutral-very-dark-blue);
+  font-weight: 400;
+  line-height: 1.56rem;
+  max-width: 70%;
+  padding-top: 1rem;
+}
+
+.card {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 15px 30px -11px rgba(131, 166, 210, 0.5);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  max-width: 22rem;
+  min-width: 13rem;
+  max-height: 15.6rem;
+  min-height: 8rem;
+}
+
+.card-title {
+  color: var(--color-neutral-very-dark-blue);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.card-description {
+  color: var(--color-neutral-very-dark-blue);
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.4375rem; /* 176.923% */
+  letter-spacing: 0.00563rem;
+}
+img {
+  align-self: end;
+}
+.one {
+  border-top: 0.25rem solid var(--color-primary-cyan);
+}
+.two {
+  border-top: 0.25rem solid var(--color-primary-red);
+}
+.three {
+  border-top: 0.25rem solid var(--color-primary-orange);
+}
+.four {
+  border-top: 0.25rem solid var(--color-primary-blue);
+}
+
+.cards {
+  display: grid;
+  grid-template: 1fr /1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.middle-cards {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (max-width: 380px) {
+  main {
+    padding: 1rem;
+  }
+  .cards {
+    grid-template: 1fr 2fr 1fr/1fr;
+  }
+}
